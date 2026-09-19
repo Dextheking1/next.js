@@ -206,6 +206,7 @@ export const experimentalSchema = {
       })
     )
     .optional(),
+  paramMatching: z.boolean().optional(),
   outputHashSalt: z.string().optional(),
   useSkewCookie: z.boolean().optional(),
   after: z.boolean().optional(),
