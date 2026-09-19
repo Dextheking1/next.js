@@ -669,6 +669,7 @@ async function callGenerateStaticParams(
 
   const workUnitStore: BuildTimeGeneratorStore = {
     type: 'build-time-generator',
+    functionName: 'generateStaticParams',
     phase: 'render',
     implicitTags,
     rootParams,
@@ -987,6 +988,7 @@ export async function buildAppStaticPaths({
     ? await workAsyncStorage.run(store, async () => {
         const generatorStore: BuildTimeGeneratorStore = {
           type: 'build-time-generator',
+          functionName: 'experimental_generateParamMatching',
           phase: 'render',
           implicitTags: await getImplicitTags(page, page, null),
           // Matching configuration does not receive concrete parameter values.
